@@ -1,0 +1,13 @@
+# Node modules
+node_modules/
+
+# Build output
+.next/
+out/
+
+# Env vars
+.env
+
+# System files
+.DS_Store
+*.log
