@@ -1,14 +1,91 @@
-# NavLa - Smart Shopping Assistant
+===========================================
+🛠️ NavLa - Smart Shopping Assistant
+System Requirements & Setup Guide
+===========================================
 
-A smart shopping application built with Next.js, Genkit, and Tailwind CSS.  Provides an optimal shopping route and a user-friendly interface.
+This document outlines the system requirements to set up and run the NavLa Smart Shopping Assistant locally or on a cloud environment.
 
-## Getting Started
+-------------------------------------------
+1. ⚙️ Software Requirements
+-------------------------------------------
 
-1.  Clone the repository.
-2.  Install dependencies: `npm install`
-3.  Set your Google Gemini API key in the `.env` file.
-4.  Run the development server: `npm run dev`
+• Operating System: 
+  - Windows 10+ / macOS Ventura+ / Ubuntu 20.04+
 
-## System Requirements
+• Node.js:
+  - Version: >= 18.x.x
+  - Download: https://nodejs.org/
 
-See NavLa_SystemRequirements.txt for details.
+• NPM:
+  - Version: >= 9.x (comes with Node.js)
+
+• Git:
+  - Version: >= 2.30
+  - Download: https://git-scm.com/downloads
+
+• IDE (Recommended):
+  - Visual Studio Code
+  - Extensions: Prettier, ESLint, Tailwind IntelliSense, TypeScript
+
+-------------------------------------------
+2. 📦 Project Dependencies (auto-installed via `npm install`)
+-------------------------------------------
+
+- next@13+
+- tailwindcss
+- typescript
+- zod
+- genkit
+- @genkit-ai/vertexai (or other Genkit providers if changed)
+- tsx (for local dev hot reloads)
+
+-------------------------------------------
+3. 🔐 Required Environment Variables
+-------------------------------------------
+
+Create a `.env` file in the root directory with:
+
+GOOGLE_GENAI_API_KEY=your_google_gemini_api_key_here
+
+👉 You can generate this key by signing up at: https://makersuite.google.com/app/apikey
+
+-------------------------------------------
+4. 💻 Hardware Recommendations (Dev Machine)
+-------------------------------------------
+
+- CPU: Intel i5 / Ryzen 5 or higher
+- RAM: 8 GB minimum (16 GB recommended)
+- Disk Space: ~500 MB (excluding Node modules)
+- Network: Stable internet connection (for GenAI API calls)
+
+-------------------------------------------
+5. 🌐 Network Access Requirements
+-------------------------------------------
+
+- Outbound HTTPS (port 443) to:
+  - `*.googleapis.com` (for Genkit / Gemini)
+  - GitHub (if pulling packages from GitHub)
+
+-------------------------------------------
+6. 🚀 Optional Deployment Targets
+-------------------------------------------
+
+- **Vercel**
+  - Easy Next.js hosting with built-in env var support
+
+- **Railway**
+  - Can run Genkit workflows if LLM API access is configured
+
+- **Google Cloud Run**
+  - Ideal if using VertexAI instead of Gemini
+
+-------------------------------------------
+7. 📎 Related Files
+
+- `.env` – Add your API key here
+- `README.md` – Project overview and instructions
+- `src/ai/generateOptimalPath.ts` – Main Genkit flow logic
+- `NavLa_SystemRequirements.txt` – (This file)
+
+-------------------------------------------
+✅ Last Updated: July 2, 2025
